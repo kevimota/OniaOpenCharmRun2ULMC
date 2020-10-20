@@ -50,7 +50,7 @@ cmsDriver.py --filein file:UpsilonToMuMuDzero_13TeV_GS.root --fileout file:Upsil
 
 * HLT (on CMSSW_9_4_14_UL_patch1):
 ```
-cmsDriver.py --filein file:UpsilonToMuMuDzero_13TeV_DR.root --fileout file:UpsilonToMuMuDzero_13TeV_HLT.root --mc --eventcontent RAWSIM --datatier GEN-SIM-RAW --conditions 94X_mc2017_realistic_v15 --customise_commands process.source.bypassVersionCheck = cms.untracked.bool(True) --step HLT:2e34v40 --nThreads 1 --geometry DB:Extended --era Run2_2017 --python_filename UpsilonToMuMuDzero_13TeV_HLT_cfg.py -n -1 --no_exec
+cmsDriver.py --filein file:UpsilonToMuMuwithDzero_13TeV_DR.root --fileout file:UpsilonToMuMuwithDZero_13TeV_HLT.root --mc --eventcontent RAWSIM --datatier GEN-SIM-RAW --conditions 94X_mc2017_realistic_v15 --customise_commands 'process.source.bypassVersionCheck = cms.untracked.bool(True)' --step HLT:2e34v40 --nThreads 1 --geometry DB:Extended --era Run2_2017 --python_filename UpsilonToMuMuwithDZero_13TeV_2017_HLT_cfg.py -n -1 --no_exec
 ```
 
 * AODSIM step:
