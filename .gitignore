@@ -4,3 +4,5 @@ files
 *.log
 *.root
 *DS_Store
+
+*cfg.py
