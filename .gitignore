@@ -1,0 +1,6 @@
+*.pyc
+crab_projects
+files
+*.log
+*.root
+*DS_Store
