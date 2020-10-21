@@ -5,10 +5,12 @@ files
 *.root
 *DS_Store
 
+*cfg.py
+*.txt
+
 *crab_config_GS_*
 *crab_config_DR_*
 *crab_config_HLT_*
 *crab_config_AOD_*
 *crab_config_MINIAOD_*
 
-*.txt
