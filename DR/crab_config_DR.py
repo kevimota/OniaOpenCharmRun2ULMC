@@ -12,7 +12,7 @@ config.JobType.numCores = 1
 config.JobType.maxMemoryMB = 2500
 
 config.Data.outputDatasetTag = 'DATASET'
-config.Data.userInputFiles = open('file.txt').readlines()
+config.Data.userInputFiles = open('paths/FILE').readlines()
 config.Data.inputDBS = 'phys03'
 config.Data.publishDBS = 'phys03'
 config.Data.splitting = 'FileBased'
