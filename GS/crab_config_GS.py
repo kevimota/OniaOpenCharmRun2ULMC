@@ -7,7 +7,7 @@ config.General.workArea = 'crab_projects'
 config.General.transferOutputs = True
 
 config.JobType.pluginName = 'PrivateMC' 
-config.JobType.psetName = 'config/CONFIG.py'
+config.JobType.psetName = 'config/CONFIG'
 
 config.Data.publication = True
 config.Data.publishDBS = 'phys03'
