@@ -7,7 +7,7 @@ njobs = 10 # Change for the wanted number of jobs
 template = "crab_config_DR"
 
 for path in subprocess.check_output("ls paths/", shell=True).decode("utf-8").splitlines():
-    if not (paths.endswith(".txt")):
+    if not (path.endswith(".txt")):
         continue
     dataset = path[0: path.find(".")]
     with open(template + ".py", 'r') as f:
