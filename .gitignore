@@ -5,7 +5,7 @@ files
 *.root
 *DS_Store
 
-*cfg.py
+GS/config/*cfg.py
 *.txt
 
 *crab_config_GS_*
