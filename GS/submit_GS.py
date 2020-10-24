@@ -3,12 +3,12 @@ import datetime
 
 today = datetime.date.today()
 
-njobs = 10 # Change for the wanted number of jobs
-evtsjob = 1000 # Change for the wanted number of evts per job
+njobs = 1000 # Change for the wanted number of jobs
+evtsjob = 100000 # Change for the wanted number of evts per job
 template = "crab_config_GS"
 
 for config in subprocess.check_output("ls config/", shell=True).decode("utf-8").splitlines():
-    if config.endswith(".pyc"):
+    if not config.endswith(".py"):
         continue
     dataset = config[0: config.find("_")]
     with open(template + ".py", 'r') as f:
