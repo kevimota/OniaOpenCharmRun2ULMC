@@ -8,6 +8,7 @@ files
 GS/config/*cfg.py
 *.txt
 *.started
+*.__afs*
 
 *crab_config_GS_*
 *crab_config_DR_*
