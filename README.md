@@ -164,12 +164,12 @@ python resubmit_MINIAOD.py
 
 * GEN,SIM step:
 ```
-cmsDriver.py Configuration/GenProduction/python/fragment_cfi.py --fileout file:GS.root --mc --eventcontent RAWSIM --datatier GEN-SIM --conditions 106X_mc2017_realistic_v7 --beamspot Realistic25ns13TeVEarly2017Collision --step GEN,SIM --geometry DB:Extended --era Run2_2017 --python_filename configname_GS_cfg.py -n 5000 --no_exec
+cmsDriver.py Configuration/GenProduction/python/fragment_cfi.py --fileout file:GS.root --mc --eventcontent RAWSIM --datatier GEN-SIM --conditions 106X_mc2017_realistic_v9 --beamspot Realistic25ns13TeVEarly2017Collision --step GEN,SIM --customise Configuration/DataProcessing/Utils.addMonitoring --geometry DB:Extended --era Run2_2017 --python_filename configname_GS_cfg.py -n 5000 --no_exec
 ```
 
 * DIGI2RAW:
 ```
-cmsDriver.py --filein file:GS.root --fileout file:DR.root --pileup_input dbs:/Neutrino_E-10_gun/RunIISummer19ULPrePremix-UL17_106X_mc2017_realistic_v6-v1/PREMIX --mc --eventcontent PREMIXRAW --datatier GEN-SIM-RAW --conditions 106X_mc2017_realistic_v6 --step DIGI,DATAMIX,L1,DIGI2RAW --procModifiers premix_stage2 --nThreads 1 --geometry DB:Extended --datamix PreMix --era Run2_2017 --python_filename configname_DR_cfg.py -n -1 --no_exec
+cmsDriver.py --filein file:GS.root --fileout file:DR.root  --pileup_input "dbs:/Neutrino_E-10_gun/RunIISummer20ULPrePremix-UL17_106X_mc2017_realistic_v6-v3/PREMIX" --mc --eventcontent PREMIXRAW --runUnscheduled --datatier GEN-SIM-DIGI --conditions 106X_mc2017_realistic_v9 --step DIGI,DATAMIX,L1,DIGI2RAW --procModifiers premix_stage2  --geometry DB:Extended --datamix PreMix --era Run2_2017 --python_filename DR_cfg.py -n -1 --no_exec
 ```
 
 * HLT (on CMSSW_9_4_14_UL_patch1):
@@ -179,12 +179,12 @@ cmsDriver.py --filein file:DR.root --fileout file:HLT.root --mc --eventcontent R
 
 * AODSIM step:
 ```
-cmsDriver.py --filein file:HLT.root --fileout file:AOD.root --mc --eventcontent AODSIM --runUnscheduled --datatier AODSIM --conditions 106X_mc2017_realistic_v6 --step RAW2DIGI,L1Reco,RECO,RECOSIM --nThreads 1 --geometry DB:Extended --era Run2_2017 --python_filename configname_AOD_cfg.py -n -1 --no_exec
+cmsDriver.py --filein file:HLT.root --fileout file:AOD.root --mc --eventcontent AODSIM --runUnscheduled --datatier AODSIM --conditions 106X_mc2017_realistic_v9 --step RAW2DIGI,L1Reco,RECO,RECOSIM --nThreads 1 --geometry DB:Extended --era Run2_2017 --python_filename configname_AOD_cfg.py -n -1 --no_exec
 ```
 
 * MiniAOD step:
 ```
-cmsDriver.py --filein file:AOD.root --fileout file:MiniAOD.root --mc --eventcontent MINIAODSIM --runUnscheduled --datatier MINIAODSIM --conditions 106X_mc2017_realistic_v6 --step PAT --nThreads 1 --geometry DB:Extended --era Run2_2017 --python_filename configname_MiniAOD_cfg.py -n -1 --no_exec
+cmsDriver.py --filein file:AOD.root --fileout file:MiniAOD.root --mc --eventcontent MINIAODSIM --runUnscheduled --datatier MINIAODSIM --conditions 106X_mc2017_realistic_v9 --step PAT --nThreads 1 --geometry DB:Extended --era Run2_2017 --python_filename configname_MiniAOD_cfg.py -n -1 --no_exec
 ```
 
 One should change the fragment_cfi.py name with the fragment name.
